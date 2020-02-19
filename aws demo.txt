@@ -1,0 +1,57 @@
+computing resources: CPU, Memory, NIC, GPU, Storage
+
+GDrive : 15 GB Storage, Change plan 
+
+
+Pay-as-you-go : 
+Pay-as-you-grow : 
+
+Any Prerequisites : 
+--> No preq 
+--> AWS + Linux 	(2-3 Sessions on Linux .. Free Linux)
+--> AWS + Linux + DevOps 
+
+AWS Developer : Developer + AWS (Preferred : Python / go / Node.js / .netCore / JSOn/ JAML)
+
+AWS SysOps Administrator : AWS + Linux/Windows
+
+AWS DevOps : AWS + Linux + CI/CD (Free Jenkins with GIT and Maven)
+
+AWS SA : AWS + OnPremise Experience.. 
+
+AWS DBA / DB Developer : AWS + RDS (WS)
+
+AWS Network Specialist : Network Admin + AWS (VPC) 
+
+AWS bigData Specialist : Bigdata + AWS 
+
+AWS ML/DS : ML/DS + AWS 
+
+AWS Engineer / AWS Administrator / Cloud Administrator / Cloud Consultant : AWS
+
+
+AWS Version GDrive : AWS S3 : 99.99% Availability, 99.999999999% Durability
+
+
+DEPLOYMENT MODELS :
+Public cloud   	: Open for all,  AWS/GCP/Azure..  Main: Service Provider
+Private cloud  	: Dedicated for One Org..  On-Prem/Cloud..  Main: Your Org / Private cloud provider..  
+Hybrid cloud 	: Pub + Pub / Pub + private.. Main: Both / Service provider
+Community cloud : Group of Org, Build the infra.. Main: One of the org from community / 3rd party org.. 
+
+Service Models of the cloud computing : 
+
+Application				--> Application delivery
+Data					--> SA
+Runtime					--> App Admin
+Middleware				--> 
+OS					--> Operating systems SysAdmin
+Virtulisation				--> Vmware/ hyper-v/citrix
+Servers					--> System Engineers 
+Database 				--> DBA
+Storage (SAN / NAS / Obj based )	--> Storage Admin
+Network (Switches, router, firewall)	--> networking
+
+
+
+
