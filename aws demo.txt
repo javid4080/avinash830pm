@@ -52,6 +52,63 @@ Database 				--> DBA
 Storage (SAN / NAS / Obj based )	--> Storage Admin
 Network (Switches, router, firewall)	--> networking
 
+I Need a Website, Can be accesable across the globe.. 
+
+SaaS : Lightsail
+PaaS : EBS
+IaaS : EC2 
+
+
+LAMP : Linux, Apache, MySQL and PHP..
+
+
+AWS Launched in March, 2006..  13 Years.. 
+S3, EC2, SQS..
+
+2004, Chris Pink man and Benjamin Black.. Proposed solution to sell services.. 
+SQS : SImple Queue service.. 
+
+AWS CEO : Andy Jessy
+AWS Annaual COnference : AWS Re:Invent, Nov/Dec, Vegas.. 
+
+AWS Global Infrastructure :
+___________________________
+
+Regions : 22 Regions across the globe.. Physical location, GeoGraphical Location.. 
+
+18 Regions for public usage.. aws.com
+2 Regions : China (Sinnet, NWCD)
+2 Regions : Us-Gov-Cloud : 
+
+Availability Zone : Data Centre / multiple DC.. Don't disclose the location.. 
+69 AZs.. Every AZ is designed to isolate the failovers.. 500 miles distance.. 
+--> Every AZ is connected with Another AZ with multiple Lines.. 
+--> Every Region Contains Min of 2 AZs.. 
+
+
+Edge Locations / PoP : 200+ edge locations / Cloudfront.. 
+
+PHD : Personal Health Dashboard.. 
+
+
+How to create an AWS Account and Support options, First steps after account creating.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
