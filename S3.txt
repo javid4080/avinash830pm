@@ -1,0 +1,81 @@
+S3 : Simple Storage Service : 
+
+--> AWS Version of Google Drive
+--> We can use s3 to store the flat files.
+
+Object Based storage : S3 : Just to store files.. We cannot install anything.. 
+Block Based Storage : EBS & Instance Store.. EC2 : Designed to run the OS.. 
+Network file systems : EFS : Available over network.. We can add to multiple ec2..
+
+
+--> Unlimited storage
+--> We can store all data in BUCKETS. 
+Bucket = Folder / Directory.. With unique name..
+--> S3 is Global service, Not a region specific.. 
+--> Soft Limit for No of Bucket = 100
+--> We store Objects in buckets.
+
+Min Obj Size : 0 bytes..
+Max Obj Size : 5 TB.. 
+
+Bucket Name : Bucket names must comply with DNS naming standards..
+--> Names must be unique
+--> Min Char : 3 Char.. 
+--> Max CHar : 63 Char..
+--> No Capital Letter..
+--> Bucket name should not start with . , Endwith . , No adjesent ..
+--> Should not resemble IP Address format..
+
+
+--> No Pre-Provisioning required.
+
+
+GDrive 						AWS				
+
+Storage plan required				Pay-as-you-go	
+100 GB Plan
+
+20Gb Access Daily				S3 Standard
+20GB No daily access, 				Standard-IA / OneZone-IA
+     but required immediately if needed
+10GB Archieve					Glacier / Glacier Deep Archieve
+	Not required immediately
+10GB NonCritical/ Easy reprodusable data	RRS (Reduced Redundancy Storage) 
+						RRS Durability : 99.99% 
+
+		Intelligent Tier: If we are not sure about the access patterns
+
+
+Available : 99.99%
+Durability : 99.999999999% 
+
+
+s3://avinash.2262020/S3.txt
+
+After Creating a bucket, We need to edit the PublicAccess Settings.. 
+
+Standard : https://s3.region.amazonaws.com/bucketname/objectname
+
+Virtual Paths : 
+https://bucketname.s3.regionname.amazonaws.com/objectname
+https://bucketname.s3.amazonaws.com/objectname
+
+
+
+Free Tier for S3 Platform : 
+
+5 GB Only Standard Storage 
+2000 PUT Requests (Uploads)
+20,000 GET Requests (Downloads)
+
+
+
+
+
+
+
+
+
+
+
+
