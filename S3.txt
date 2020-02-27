@@ -43,7 +43,7 @@ Storage plan required				Pay-as-you-go
 10GB NonCritical/ Easy reprodusable data	RRS (Reduced Redundancy Storage) 
 						RRS Durability : 99.99% 
 
-		Intelligent Tier: If we are not sure about the access patterns
+	Intelligent Tier: If we are not sure about the access patterns
 
 
 Available : 99.99%
@@ -54,7 +54,7 @@ s3://avinash.2262020/S3.txt
 
 After Creating a bucket, We need to edit the PublicAccess Settings.. 
 
-Standard : https://s3.region.amazonaws.com/bucketname/objectname
+Standard URL : https://s3.region.amazonaws.com/bucketname/objectname
 
 Virtual Paths : 
 https://bucketname.s3.regionname.amazonaws.com/objectname
@@ -67,6 +67,64 @@ Free Tier for S3 Platform :
 5 GB Only Standard Storage 
 2000 PUT Requests (Uploads)
 20,000 GET Requests (Downloads)
+
+
+
+________________________________________________________________________________________
+D: 27/02/2020
+
+Versioning:
+--> Track changes happening on our files.
+--> Maintains CUrrent/Latest version also, previous versions.
+--> If we accidentally delete any file, we can get it back (Version:hide)
+--> If we delete Latest Version of object (Version : Hide), Then only we will get Delete marker. 
+--> To get object back to s3, Delete the DM..
+--> When Version:SHow, Delete option will not create any Delete markers..
+
+Cross Region Replication (CRR) / Same Region Replication (SRR):
+
+--> If we want to maintain multiple copies of our s3 bucket data (DR/HA), in another region / same region. 
+--> IF we have customers/users in another geo location/region.
+--> DR / HA 
+
+
+LMR/LCR : Life Cycle Management Roles : 
+
+
+Static Website Hosting : 
+--> Bucket name = domain name
+
+index.html
+
+http://bucketname.s3-website.region.amazonaws.com
+
+Http Status coded: 
+
+2XX : OK / Success
+3XX : Redirection Error
+4XX : Client Side error
+5XX : Server Side Error
+
+
+Task : Configure SRR (Same region replication).. What is priority in SRR..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
