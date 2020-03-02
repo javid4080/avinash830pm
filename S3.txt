@@ -105,26 +105,147 @@ Http Status coded:
 4XX : Client Side error
 5XX : Server Side Error
 
+Task : Configure SRR (Same region replication).. What is priority in SRR..!!!
 
-Task : Configure SRR (Same region replication).. What is priority in SRR..
+_________________________________________________________________________________________
 
+D: 28/02/2020
 
+Server access logging : Loggin option on our s3 bucket. We can store logs about this bucket in same/another bucket.
+--> Applicable to only one bucket.
+--> If we want to enable logging for entire S3 platform, we can use Cloudtrail option (Object Level Logging - Cloudtrail)
 
-
-
-
-
-
-
-
-
+Object-level logging: Works with Cloudtrail service.
 
 
+Encryption: 
+
+--> In-Transit Encryption
+
+	--> SSL / TLS
+
+--> Server Side Encryption (SSE) / At-Rest 		(When data is in aws side)
+
+	--> SSE - S3 (AES-256)
+	--> SSE - KMS (Key Management Service) (KMS Generates and Manages the keys)
+	--> SSE - C (Customer) (Customer Provides the Key and KMS manages the key)
+
+--> Client Side Encryption
+
+	--> Customer is responsible for this CSE.
+	--> Customer can use his own encryption mechanism, before uploading data to s3.
 
 
 
+KMS : AWS managed keys comes under Free tier eligibility
+
+Customer managed keys : NO FREE TIER
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations.
 
 
+SSE - KMS
+SSE - C External
+HSM : Custom key store (CloudHSM)
+
+Key administrators : Who can manage the key.. We can even allocate Key Delete option also for this key admins if required.
+
+key usage permissions : Who can utilise this key / Who have permission to decrypt.
+
+___
+
+Object Lock : 
+--> We need to enable this feature, whenever we are creating the bucket.
+--> If you already have an existing bucket, Contact AWS to enable this feature.
+--> Versioning must be enabled to use Object lock.
+
+Governance mode : can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode : cannot be disabled by any user, including the root account.
+
+__
+
+Transfer acceleration : We can use Edge locations to upload/download data from this bucket. (NO FREE TIER)
+
+___
+
+Events : 
+
+--> SQS 
+--> Lambda
+--> SNS (Simple Notifications Service) : 
+
+SNS : Service designed to deliver the notifications.. 
+
+--> Create a TOPIC --> Add Subscribers to Topic --> use topic with S3.. 
+
+_______________________________________________________________________________________
+D:03/02/2020
+
+Glacier : 
+
+Bulk retrieval : Typically within 5-12 hours
+Standard retrieval : Typically within 3 - 5 hours
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+
+AWS Acc 1			Acc 2
+
+Bucket 		-->		?  S3 (Cananical ID)
+
+				Not get the bucket on s3 dashboard.. 3rd party / CLI
+
+Bucket policy:
+______________
+
+User 1	Bucket --> S3FullAccess --> 
+User 2 Bucket --> S3FullAccess --> Deny For user1 on user2 bucket..
+
+User 3 --> User3 --> Only User3 bucket should list.. 
+Avinash --> Avinash Bucket
+
+User 4 --> Deny Upload option on a bucket for user 4
+
+
+
+Req : Avinash should get access on all buckets but you want to Deny on one bucket PUT and GET. 
+
+
+Effect : Allow or DENY
+Actions : Allowed / denied tasks/permissions/operation.. 
+Resource : What bucket you want to ..
+Principle : FOr What IAM USER/Group
+
+ARN : arn:aws:s3:::avinash.bucket/*
+
+
+
+Req : USer1 need to have access on his own bucket called USER1Bucket.. 
+
+https://s3.console.aws.amazon.com/s3/buckets/bucketname
+
+
+Storage class analysis: Reports on access patterns.. 
+
+Cloudwatch : Monitor the resources.. 
+
+
+Import / Export : 
+_________________  
+
+AWS Snowball : 80TB : 200$/Job.. 
+AWS Snowball Edge : 100 TB : 250$/Job.. 
+AWS Snowmobile : PB Scale container.. 
+
+UPS / DHL
+
+5 TB Data.. Upload that 
+
+
+AWS Direct Connect: Dedicated network connectivity from AWS to Our organisation.. Based on selected bandwidth and data transfer, we will get charged.
+
+
+Task : Create an IAM user USER1.. Create a Bucket.. BUCKET1..  User1 Should get access only on Bucket1 to perform PUT/GET...  Deny --> DeletePolicy/DeleteBucket.. 
 
 
 
