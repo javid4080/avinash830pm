@@ -1,0 +1,123 @@
+EC2 : Elastic Compute Cloud.. 
+
+Elastically	CPU		AWS Cloud Service EC2 
+		Memory
+		Storage
+		Network
+		GPU
+		Applications/Software
+
+--> Launch Instances
+
+AWS = Instance
+Azure = Azure VM
+VMware = VM / Virtual Machene
+GCP = Engine
+On-Prem = Box / Blade / Tower
+
+Server = IT Manager = Future Analysis = Configuration =Acco/Purchasing Dept.. = Send Qupote Vendors = Dell --> Couple of meetings --> Finalise the price --> Release P.O along with 100% Advance --> 4 Weeks Delivery --> 
+
+Server rack
+Network rack
+Cooling systems
+Flooring
+Power connectivity / UPS
+Switches 
+Firewall
+
+When using EC2, No need to predict future usage.. 
+
+capital expenditure: Guess all the future use and build.. ROI not immedete.. 
+Operational expenditure: Cost to manage the resources.. 
+
+Need a Server : 
+
+On-Demand Instances : 
+Reserved Instances : 
+Spot Instances : 
+
+Tenancy Model : 
+Shared tenancy
+Dedicated tenancy
+
+How to launch our first Instance (Windows)
+
+_________________________________________________________________________________________
+
+D: 04/03/2020
+
+On-Demand EC2 Instances : When we don't have idea on workloads.. No PRedictable usage.. If you want to test your application for the first time.. 
+Pricing : /Sec billing (With Min of 60 Sec)
+
+Reserved Instances : Predictable usage.. Stable workloads.. We will get these instance for the duration of 1 Year / 3 Years.. In contract with AWS.. 
+
+	--> Standard RI : We cannot change the configuration.. 
+	--> Convertable RI : We can change the configuration.. 
+	--> Scheduled RI : Repeaded / Persistant usage.. 
+
+Pricing : --> Full Upfront : 100% while purchasing instance
+	  --> Partial Upfront : Pay 30-50% now.. Remaining Monthly basis.. 
+	  --> No Upfront : No need to pay anything now.. Pay Monthly basis.. 
+
+Spot Instances : If our application have flexible start and stop times, We can go with spot instances.. We can get high configuration servers at low cost.. 
+
+1 Hr 30 Min : If price increased, AWS terminates the instance and we will get charged for full/completed hours, not for partial hours.. : 1 Hr.. 
+
+1 Hr 30 Min : If price not increased, you terminates the instance and we will get charged for full duration, Included partial hours also.. : 1 Hr 30 Min.. 
+
+We can use Pricing history, We can create a spot fleet also.. 
+
+
+How to Launch an EC2 Instance..!!!
+
+Step 1 : CHoose an AMI (An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance.)
+
+Os : Linux (Amazon Linux, Ubuntu, Redhat, Fedora, CentoS, Kali linux), Windows (2019,2016,2012/ 2012 r2)
+
+Step 2 : Choose the Instance Type (Choosing the configuration : vCPU, Memory, Network)
+
+General Purpose : Stable performance for all resources 	: t2, t3, m5, m5d
+Compute optimized : Gives best Compute CPU power 	: C4, C5, C5d
+GPU instances : Graphic utilisation 			: P2, g4dn
+Memory optimized : More RAM/Memory performance		: r4, r5, r5a, r5ad, x1
+Storage optimized : Disk performance / IOPS 		: i2, i3, d2
+
+c5.2xlarge	--> 8vCPU and 16 RAM, Up to 10 Gigabit
+
+T2.micro --> Only instance comes under free tier eligibility
+
+
+
+Windows : RDP : Remote Desktop Protocol : 3389 : 0.0.0.0/0
+Linux : SSH : Secure shell : 22 : 
+
+
+KeyPair : 
+
+
+Task : Launch a Windows ec2 instance (Choose t2.micro)
+
+Task 2 : Change the Default password, and try to login using the keypair generated password and changed password. Test which one is working. 
+
+Task 3 : Create a new user in Windows OS and Provide remote connection permissions and try to login and verify his access. --> Provide local admin rights for newly created user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
