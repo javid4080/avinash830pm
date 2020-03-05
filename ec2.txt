@@ -51,7 +51,7 @@ Pricing : /Sec billing (With Min of 60 Sec)
 
 Reserved Instances : Predictable usage.. Stable workloads.. We will get these instance for the duration of 1 Year / 3 Years.. In contract with AWS.. 
 
-	--> Standard RI : We cannot change the configuration.. 
+	--> Standard RI : We cannot change the configuration..  
 	--> Convertable RI : We can change the configuration.. 
 	--> Scheduled RI : Repeaded / Persistant usage.. 
 
@@ -101,23 +101,74 @@ Task 2 : Change the Default password, and try to login using the keypair generat
 
 Task 3 : Create a new user in Windows OS and Provide remote connection permissions and try to login and verify his access. --> Provide local admin rights for newly created user.
 
+_______________________________________________________________________________________
+D: 05/3/2020
+
+Free Tier : 750 Hours, t2.micro Windows Instance.. 
+750 Hours, t2.micro Linux Instance.. 
 
 
+Step 1: Choose an Amazon Machine Image (AMI) : Amazon Linux
+
+Step 2: Choose an Instance Type : t2.micro
+
+Step 3: Configure Instance Details
+
+No of instances : 1	(In a region we can have 20 Running instances)
+Shutdown behavior : STOP
+
+Stop : We can start at any time
+Terminate : Delete.. 
+
+Enable termination protection : Extra step to terminate the instance. It eliminates accidental terminations.
+
+Monitoring : Cloudwatch.. Enabled by defaultly..
+
+Basic Monitoring : 5 Min  : Free
+Detailed / Enhanced Monitoring : 1 Min : Cost us
+
+Tenancy : 
+--> Shared Tenancy : Same hardware for multiple customers (Free Tier)
+--> Dedicated Tanancy : Dedicated hardware for your AWS account. Hardware will not share with another customers.
+	--> Dedicated Instance : 
+	--> Dedicated Host : 
+
+T2/T3 Unlimited : Addes the General purpose resources autimatically based on the usage. 
 
 
+Step 4: Add Storage
+
+Don't choose more than 30 GB
+
+Step 5: Add Tags.. We can define our own metadata.. Key and Value
+We can add max of 50 Tags/Instance.. 
+
+Step 6: Configure Security Group
+
+As we are launching Linux instance, PORT 22 Must be opened, THen only we can connect to this instance.. 
+
+Anywhere : 0.0.0.0/0 : 
+My IP : Picks currently connected network's public IP
 
 
+How to connect to a Linux INstance : 
+--> Putty
+--> Windows OS, We can use command prompt by installing openssh. 
+--> MobaXterm
 
 
+Putty Needs the private key in .ppk format. It will not support .pem format.
+
+We need to convert .pem to .ppk.. PuttyGen
+
+ssh -i keypair.pem username@publicip
+
+If it is giving badpermissions error.. 
+chmod 400 Keypairname
 
 
+https://www.udemy.com/course/linuxwithavinash/?couponCode=MARCHLINUX
 
-
-
-
-
-
-
-
+Works for coming 3 days only.. 
 
 
