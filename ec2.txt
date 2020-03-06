@@ -169,6 +169,48 @@ chmod 400 Keypairname
 
 https://www.udemy.com/course/linuxwithavinash/?couponCode=MARCHLINUX
 
-Works for coming 3 days only.. 
+Works for coming 2 days only.. 
+
+_________________________________________________________________________________________
+
+D: 06/03/2020
+
+Storage : 
+
+--> Block based Storage : Designed to run OS
+--> 2 Root Device Types
+	--> EBS (Elastic Block Storage) VOlumes : We can stop/start. We will not loss any data if underlying hardware failure happens. 
+	--> Instance Store Volumes : We cannot stop / start the instances. If underlying hardware failure happens, we will loss all data.. We refers it also as Ephemeral Storage.
+Instance store will not support all the instance and AMI types. NO FREE TIER..We can reboot if required..  
+
+Use NetAPP tools to convert an Instance store volume to EBS Volume.
+
+
+EBS Volumes : 
+
+General Purpose (SSD) : GP2 : Min 1 Gb, Max 16 TB.. Dev/test, Boot volume, Balanced performance.. Max : 16,000 IOPS...    1 GB = 3 IOPS with Min of 100 IOPS.. 
+
+Provisioned IOPS (SSD) : io1 : Min 4 Gb, Max 16 TB.. I/O intensive applicagtions, Any database on Instance, NoSQL.. Highest performance.. Max IOPS : 64,000.. 
+1 GB  = 50 IOPS.. We can specify our required IOPS count.. 
+
+Magnetic (Standard) : Standard : Min 1 Gb, Max 1 TB.. Standard performance.. Lowest cost.. 
+
+Throughput optimised (HDD) : st1 : Min 500 GB, Max 16 TB.. BigData applications.. Datawarehousings.. Log Processings.. Max : 500 IOPS.. THroughput : 500 MB/s.. 
+
+Cold HDD : sc1 : Min 500 GB, Max 16 TB.. Low cost HDD.. Less Frequently accesed data.. Only fewer scans per day on data.. 
+
+root : Boot Volume : GP2, Io1 and Magnetic
+
+IOPS : Input and Output per second
+
+
+Snapshot : Backup of an EBS volume called as Snapshot.. 
+
+Practice Snapshot with Same region ec2 instance.. 
+
+Read EBS volumes comparison chart.. 
+
+aws.amazon.com/ebs.. FAQs
+
 
 
