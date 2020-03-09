@@ -180,7 +180,7 @@ Storage :
 --> Block based Storage : Designed to run OS
 --> 2 Root Device Types
 	--> EBS (Elastic Block Storage) VOlumes : We can stop/start. We will not loss any data if underlying hardware failure happens. 
-	--> Instance Store Volumes : We cannot stop / start the instances. If underlying hardware failure happens, we will loss all data.. We refers it also as Ephemeral Storage.
+	--> Instance Store Volumes / EPhemeral Storage : We cannot stop / start the instances. If underlying hardware failure happens, we will loss all data.. We refers it also as Ephemeral Storage.
 Instance store will not support all the instance and AMI types. NO FREE TIER..We can reboot if required..  
 
 Use NetAPP tools to convert an Instance store volume to EBS Volume.
@@ -211,6 +211,60 @@ Practice Snapshot with Same region ec2 instance..
 Read EBS volumes comparison chart.. 
 
 aws.amazon.com/ebs.. FAQs
+
+_________________________________________________________________________________________
+
+D: 09/03/2020
+
+DLM : Data LifyCycle Manager : Automate the Snapshot creation process.. 
+
+
+Snapshots : Where AWS is storing these snapshots : Amazon's own S3 Platform.. 
+
+--> We can create a volume in same Region.. / Copy SS to Another Region .. /Share SS with ANotyher AWS account / Share snapshot with public.. 
+
+
+Windows : IIS : 
+
+Security Groups : 
+--> Security Groups are stateful (Need to takes care about inbound rules)
+--> Default SG available for all VPCs in all Regions.
+--> Changes to SG takes effect immediately, No need to stop/start/reboot.. 
+
+				myip/ custom/ anywhere
+Windows : RDP : 3389 : 
+Linux : SSH : 22
+Web Server : http : 80 : 
+Secure web : https : 443 : 
+Mysql : 3306
+Mssql : 1433
+
+NO FREE TIER : Approx COst 3 $/M.. 
+Elastic IP Address / EIP : A fixed IP address allocated to our AWS account specific region.
+
+NIC : Network Interface Card : 
+
+ENI : Elastic Network Interface : EC2 : 
+
+
+Task : Launch a windows ec2 instance and make it webserver. Add Additional NIC cards and test the output using multiple Private IP addresses.
+
+Launch additional EC2 instance, and test the Webserver using multiple private IP addresses, and website delivery should limit to this instance only. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
